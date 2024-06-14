@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update user</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    
+  </head>
+  <body>
+  
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/create"  class="active" >Create User</a>
+    
+    </div>
+    <div class="form">
+      <form action="/updateUser" method="POST">
+        <fieldset>
+          <legend>Update User</legend>
+          <div hidden>
+            <input type="text" name="userId" value="<%= user.id %>" />
+            <label for="">Id</label>
+          </div>
+          <div>
+            <input type="text" name="email" value="<%= user.email %>" />
+            <label for="">Email</label>
+          </div>
+          <div>
+            <input type="text" name="name" value="<%= user.name %>" />
+            <label for="">Name</label>
+          </div>
+          <div>
+            <input type="text" name="city" value="<%= user.city %>" />
+            <label for="">City</label>
+          </div>
+          <button>ADD</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

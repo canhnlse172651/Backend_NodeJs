@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/create">Create user</a>
+    </div>
+    <div class="container">
+      <h1>List of User</h1>
+      <table id="customers">
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+
+        <% for (let i = 0 ; i < listUser.length ; i++ ){ %>
+        <tr>
+          <td><%= listUser[i].id %></td>
+          <td><%= listUser[i].email %></td>
+          <td><%= listUser[i].name %></td>
+          <td><%= listUser[i].city %></td>
+          <td>
+           <a href="/update/<%= listUser[i].id %>"> <button class="delete">Update</button></a>
+           <a href="/delete/<%= listUser[i].id %>""> <button class="update">Delete</button>
+           </td></a>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>
